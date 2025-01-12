@@ -1,0 +1,24 @@
+---
+// FontPreload.astro
+const fonts = [
+  { href: "/fonts/Sansation/Sansation_Regular.ttf", type: "font/ttf" },
+  {
+    href: "/fonts/Montserrat/static/Montserrat-SemiBold.ttf",
+    type: "font/ttf",
+  },
+  { href: "/fonts/Roboto/Roboto-Light.ttf", type: "font/ttf" },
+  { href: "/fonts/Roboto/Roboto-Regular.ttf", type: "font/ttf" },
+];
+---
+
+{
+  fonts.map((font) => (
+    <link
+      rel="preload"
+      href={font.href}
+      as="font"
+      type={font.type}
+      crossorigin="anonymous"
+    />
+  ))
+}
