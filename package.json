@@ -6,9 +6,13 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "sass": "sass --watch src/scss/globals.scss src/styles/globals.css"
   },
   "dependencies": {
     "astro": "^5.1.5"
+  },
+  "devDependencies": {
+    "create-codices": "^0.2.8"
   }
 }

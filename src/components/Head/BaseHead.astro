@@ -1,11 +1,19 @@
 ---
-import FontsPreload from "./FontsPreload.astro"
+interface Props {
+  title: String;
+}
+
+const { title } = Astro.props;
+
+import FontsPreload from "./FontsPreload.astro";
+import "@/styles/globals.css";
 ---
-    <head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<FontsPreload />
-		<title>Coco Gifts | Gifts</title>
-	</head>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="generator" content={Astro.generator} />
+  <FontsPreload />
+  <title>{title}</title>
+</head>

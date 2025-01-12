@@ -1,0 +1,185 @@
+@font-face {
+  font-family: "Sansation";
+  src: url("/fonts/Sansation/Sansation_Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat/static/Montserrat-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto/Roboto-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lexend Zetta";
+  src: url("/fonts/Lexend_Zetta/static/LexendZetta-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "League Spartan Regular";
+  src: url("/fonts/League_Spartan/static/LeagueSpartan-Regular.ttf") format("trueype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ABeeZee";
+  src: url("/fonts/ABeeZee/ABeeZee-Regular.ttf") format("trueype");
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+  font-family: "Sansation", sans-serif, "Roboto", sans-serif, "Montserrat", sans-serif, "Lexend Zetta", sans-serif, "Roboto", sans-serif, "Roboto", sans-serif, "Arial", "Helvetica", sans-serif;
+  box-sizing: border-box;
+  line-height: 1.6;
+  color: rgb(235, 235, 235);
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100dvh;
+  width: 100%;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 50px 1fr 100px;
+  grid-template-areas: "header header header" "main main main" "footer footer footer";
+  min-height: 100dvh;
+  background-color: rgb(5, 5, 5);
+  padding: 0;
+  margin: 0;
+}
+.body .main {
+  grid-area: main;
+  height: max-content;
+  width: auto;
+}
+.body h1,
+.body h2,
+.body h3,
+.body h4 {
+  text-wrap: balance;
+}
+.body p {
+  text-wrap: pretty;
+}
+.body a {
+  text-decoration: none;
+  color: inherit;
+}
+.body a:hover {
+  text-decoration: underline;
+}
+.body ul ol li {
+  list-style: none;
+}
+.body img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.body button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.header {
+  grid-area: header;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  gap: 50px;
+}
+.header .menu-toggle {
+  display: none;
+}
+.header .hamburger {
+  display: none;
+  cursor: pointer;
+}
+.header .hamburger .icon-hamburguer {
+  transition: transform 0.3s ease-in-out;
+}
+.header .header-nav-list {
+  display: flex;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  gap: 50px;
+}
+.header .header-nav-list .header-nav-link {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+@media (max-width: 750px) {
+  .header-container {
+    padding: 0 1.5rem;
+    align-items: end;
+    justify-content: end;
+  }
+  .header-container .menu-toggle:checked ~ .nav-links {
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  .header-container .hamburger {
+    display: inline-block;
+    z-index: 11;
+  }
+  .header-container .nav-links {
+    padding: 5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    background: rgb(5, 5, 5);
+    height: 100vh;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 10;
+  }
+  .header-container .nav-links .nav-link {
+    display: flex;
+  }
+}
+
+/*# sourceMappingURL=globals.css.map */

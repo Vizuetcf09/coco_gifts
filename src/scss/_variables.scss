@@ -1,0 +1,56 @@
+/// Variables
+///
+/// Colores
+///
+$white-color: rgba(255, 255, 255, 100) !default;
+$black-color: rgba(0, 0, 0, 100) !default;
+///
+$background-color: rgba(5, 5, 5, 100) !default;
+$background-image-url: url("public/images/bg-image.svg");
+///
+$primary-color: rgb(234, 141, 255) !default;
+$secundary-color: rgb(145, 180, 255) !default;
+$tertiary-color: rgb(104, 228, 255) !default;
+$quaternary-color: rgb(255, 255, 255) !default;
+///
+/// Gradient colors
+///
+$gradient-start-color: rgba($black-color, 100) !default;
+$gradient-center-color: rgba($black-color, 60) !default;
+$gradient-end-color: $background-color !default;
+///
+/// Fonts
+///
+$roboto-font: "Roboto", sans-serif;
+///
+$sansation-font: "Sansation", sans-serif;
+$montserrat-semibold-font: "Montserrat", sans-serif;
+$roboto-regular-font: $roboto-font;
+$roboto-light-font: $roboto-font;
+$roboto-medium-font: $roboto-font;
+$lexant-zetta-regular-font: "Lexend Zetta", sans-serif;
+$league-spartan-regular-font: "League Spartan Regular", sans-serif;
+$abeezee-regular-font: "ABeeZee", sans-serif;
+///
+/// Font colors
+///
+$text-color-primary: rgba(235, 235, 235, 100) !default;
+$text-color-secundary: rgba(200, 200, 200, 100) !default;
+///
+/// Font size
+$font-size: 16px;
+$menu-item-font-size: 16px;
+///
+/// Grids
+///
+$grid-gutter-width: space(3) - 0.125 !default;
+$grid-row-columns: 6 !default;
+$grid-columns: 12 !default;
+///
+$max-width: 100rem;
+//
+$w-sm: 550px;
+$w-md: 750px;
+$w-lg: 1248px;
+$w-xl: 1688px;
+///
